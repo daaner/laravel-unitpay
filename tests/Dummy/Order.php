@@ -1,6 +1,6 @@
 <?php
 
-namespace ActionM\UnitPay\Test\Dummy;
+namespace Daaner\UnitPay\Test\Dummy;
 
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;

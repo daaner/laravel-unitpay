@@ -1,11 +1,11 @@
 <?php
 
-namespace ActionM\UnitPay\Facades;
+namespace Daaner\UnitPay\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Actionm\UnitPay\UnitPayController
+ * @see \Daaner\UnitPay\UnitPayController
  */
 class UnitPay extends Facade
 {

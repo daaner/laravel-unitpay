@@ -6,7 +6,7 @@
         "unitpay",
         "payments"
     ],
-    "homepage": "https://github.com/actionm/laravel-unitpay",
+    "homepage": "https://github.com/daaner/laravel-unitpay",
     "license": "MIT",
     "authors": [
         {
@@ -29,13 +29,13 @@
     },
     "autoload": {
         "psr-4": {
-            "ActionM\\UnitPay\\Facades\\": "src/Facades",
-            "ActionM\\UnitPay\\": "src"
+            "Daaner\\UnitPay\\Facades\\": "src/Facades",
+            "Daaner\\UnitPay\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ActionM\\UnitPay\\Test\\": "tests"
+            "Daaner\\UnitPay\\Test\\": "tests"
         }
     },
     "scripts": {
@@ -47,10 +47,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "ActionM\\UnitPay\\UnitPayServiceProvider"
+                "Daaner\\UnitPay\\UnitPayServiceProvider"
             ],
             "aliases": {
-                "UnitPay": "ActionM\\UnitPay\\Facades\\UnitPay"
+                "UnitPay": "Daaner\\UnitPay\\Facades\\UnitPay"
             }
         }
     }

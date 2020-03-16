@@ -1,9 +1,9 @@
 <?php
 
-namespace ActionM\UnitPay;
+namespace Daaner\UnitPay;
 
 use Illuminate\Bus\Queueable;
-use ActionM\UnitPay\Events\UnitPayEvent;
+use Daaner\UnitPay\Events\UnitPayEvent;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
@@ -14,7 +14,7 @@ class UnitPayNotification extends Notification implements ShouldQueue
 {
     use Queueable;
 
-    /** @var \ActionM\UnitPay\Events\UnitPayEvent * */
+    /** @var \Daaner\UnitPay\Events\UnitPayEvent * */
     protected $event;
 
     public function via($notifiable)

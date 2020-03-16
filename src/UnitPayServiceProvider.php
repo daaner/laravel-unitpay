@@ -1,6 +1,6 @@
 <?php
 
-namespace ActionM\UnitPay;
+namespace Daaner\UnitPay;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -32,7 +32,7 @@ class UnitPayServiceProvider extends ServiceProvider
         $this->app['events']->subscribe(UnitPayNotifier::class);
 
         $this->app->singleton('unitpay', function () {
-            return $this->app->make('ActionM\UnitPay\UnitPay');
+            return $this->app->make('Daaner\UnitPay\UnitPay');
         });
 
         $this->app->alias('unitpay', 'UnitPay');

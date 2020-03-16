@@ -1,11 +1,11 @@
 <?php
 
-namespace ActionM\UnitPay;
+namespace Daaner\UnitPay;
 
 use Illuminate\Http\Request;
-use ActionM\UnitPay\Events\UnitPayEvent;
+use Daaner\UnitPay\Events\UnitPayEvent;
 use Illuminate\Support\Facades\Validator;
-use ActionM\UnitPay\Exceptions\InvalidConfiguration;
+use Daaner\UnitPay\Exceptions\InvalidConfiguration;
 
 class UnitPay
 {

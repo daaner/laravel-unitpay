@@ -1,6 +1,6 @@
 <?php
 
-namespace ActionM\UnitPay\Events;
+namespace Daaner\UnitPay\Events;
 
 use Illuminate\Queue\SerializesModels;
 

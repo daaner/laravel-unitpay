@@ -1,14 +1,14 @@
 <?php
 
-namespace ActionM\UnitPay\Test;
+namespace Daaner\UnitPay\Test;
 
 use Illuminate\Http\Request;
-use ActionM\UnitPay\Test\Dummy\Order;
-use ActionM\UnitPay\UnitPayNotifiable;
-use ActionM\UnitPay\Events\UnitPayEvent;
-use ActionM\UnitPay\UnitPayNotification;
-use ActionM\UnitPay\Test\Dummy\AnotherNotifiable;
-use ActionM\UnitPay\Test\Dummy\AnotherNotification;
+use Daaner\UnitPay\Test\Dummy\Order;
+use Daaner\UnitPay\UnitPayNotifiable;
+use Daaner\UnitPay\Events\UnitPayEvent;
+use Daaner\UnitPay\UnitPayNotification;
+use Daaner\UnitPay\Test\Dummy\AnotherNotifiable;
+use Daaner\UnitPay\Test\Dummy\AnotherNotification;
 use Illuminate\Support\Facades\Notification as NotificationFacade;
 
 class UnitPayTest extends TestCase
@@ -179,7 +179,7 @@ class UnitPayTest extends TestCase
     /** @test */
     public function generate_order_true_validation_false()
     {
-        $this->expectException('ActionM\UnitPay\Exceptions\InvalidConfiguration');
+        $this->expectException('Daaner\UnitPay\Exceptions\InvalidConfiguration');
         $this->unitpay->generateUnitPayOrderWithRequiredFields('', '', 'test@example.com', 'Item name', '');
     }
 
@@ -222,11 +222,11 @@ class UnitPayTest extends TestCase
     public function test_order_need_callbacks()
     {
         $request = $this->create_test_request('check', 'ec61edc55b99b7b62d8157dffd88895d72250e02163b1a60cd5f52d48d8a7015');
-        $this->expectException('ActionM\UnitPay\Exceptions\InvalidConfiguration');
+        $this->expectException('Daaner\UnitPay\Exceptions\InvalidConfiguration');
         $this->unitpay->callFilterSearchOrder($request);
 
         $request = $this->create_test_request('check', 'ec61edc55b99b7b62d8157dffd88895d72250e02163b1a60cd5f52d48d8a7015');
-        $this->expectException('ActionM\UnitPay\Exceptions\InvalidConfiguration');
+        $this->expectException('Daaner\UnitPay\Exceptions\InvalidConfiguration');
         $this->unitpay->callFilterPaidOrder($request, ['order_id' => '12345']);
     }
 

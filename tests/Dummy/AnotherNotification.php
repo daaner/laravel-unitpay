@@ -1,8 +1,8 @@
 <?php
 
-namespace ActionM\UnitPay\Test\Dummy;
+namespace Daaner\UnitPay\Test\Dummy;
 
-use ActionM\UnitPay\UnitPayNotification;
+use Daaner\UnitPay\UnitPayNotification;
 
 class AnotherNotification extends UnitPayNotification
 {

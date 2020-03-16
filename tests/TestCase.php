@@ -1,9 +1,9 @@
 <?php
 
-namespace ActionM\UnitPay\Test;
+namespace Daaner\UnitPay\Test;
 
-use ActionM\UnitPay\UnitPay;
-use ActionM\UnitPay\UnitPayServiceProvider;
+use Daaner\UnitPay\UnitPay;
+use Daaner\UnitPay\UnitPayServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Illuminate\Support\Facades\Notification as NotificationFacade;
 

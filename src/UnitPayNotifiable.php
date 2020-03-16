@@ -1,6 +1,6 @@
 <?php
 
-namespace ActionM\UnitPay;
+namespace Daaner\UnitPay;
 
 use Illuminate\Notifications\Notifiable as NotifiableTrait;
 

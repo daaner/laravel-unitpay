@@ -1,6 +1,6 @@
 <?php
 
-namespace ActionM\UnitPay\Exceptions;
+namespace Daaner\UnitPay\Exceptions;
 
 use Exception;
 use Illuminate\Notifications\Notification;

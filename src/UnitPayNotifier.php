@@ -1,10 +1,10 @@
 <?php
 
-namespace ActionM\UnitPay;
+namespace Daaner\UnitPay;
 
-use ActionM\UnitPay\Events\UnitPayEvent;
+use Daaner\UnitPay\Events\UnitPayEvent;
 use Illuminate\Contracts\Events\Dispatcher;
-use ActionM\UnitPay\Exceptions\InvalidConfiguration;
+use Daaner\UnitPay\Exceptions\InvalidConfiguration;
 
 class UnitPayNotifier
 {
