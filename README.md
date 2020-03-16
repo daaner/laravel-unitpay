@@ -5,7 +5,7 @@
 
 Accept payments via UnitPay ([unitpay.ru](http://unitpay.ru)) using this Laravel framework package ([Laravel](https://laravel.com)).
 
-Based on [Actionm](https://github.com/actionm/laravel-unitpay)
+Based on [ActionM](https://github.com/actionm/laravel-unitpay)
 
 - receive payments, adding just the two callbacks
 - receive payment notifications via your email or Slack
@@ -28,7 +28,7 @@ Add the service provider to the `providers` array in `config/app.php`:
 ```php
 'providers' => [
 
-    ActionM\UnitPay\UnitPayServiceProvider::class,
+    Daaner\UnitPay\UnitPayServiceProvider::class,
 
 ]
 ```
@@ -36,22 +36,22 @@ Add the service provider to the `providers` array in `config/app.php`:
 Add the `UnitPay` facade to your facades array:
 
 ```php
-    'UnitPay' => ActionM\UnitPay\Facades\UnitPay::class,
+    'UnitPay' => Daaner\UnitPay\Facades\UnitPay::class,
 ```
 
 Publish the configuration file and views
 ``` bash
-php artisan vendor:publish --provider="ActionM\UnitPay\UnitPayServiceProvider"
+php artisan vendor:publish --provider="Daaner\UnitPay\UnitPayServiceProvider"
 ```
 
 Publish only the configuration file
 ``` bash
-php artisan vendor:publish --provider="ActionM\UnitPay\UnitPayServiceProvider" --tag=config
+php artisan vendor:publish --provider="Daaner\UnitPay\UnitPayServiceProvider" --tag=config
 ```
 
 Publish only the views
 ``` bash
-php artisan vendor:publish --provider="ActionM\UnitPay\UnitPayServiceProvider" --tag=views
+php artisan vendor:publish --provider="Daaner\UnitPay\UnitPayServiceProvider" --tag=views
 ```
 
 ## Configuration
@@ -202,13 +202,11 @@ $ composer test
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
-## Security
-
-If you discover any security related issues, please send me an email at actionmanager@gmail.com instead of using the issue tracker.
 
 ## Credits
 
 - [ActionM](https://github.com/actionm)
+- [Daan](https://github.com/daaner)
 - [All Contributors](../../contributors)
 
 ## License
