@@ -16,8 +16,7 @@
         {
             "name": "daan",
             "email": "daan@ukr.net"
-        },
-
+        }
     ],
     "require": {
         "php": ">=7.1.3",
