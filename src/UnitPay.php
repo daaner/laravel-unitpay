@@ -361,9 +361,21 @@ class UnitPay
     public function payOrderFromGate(Request $request)
     {
         // Validate request params from UnitPay server.
-        if (! $this->validateOrderRequestFromGate($request)) {
-            return false;
+        if (! $this->AllowIP($request->ip())) {
+            return $this->responseError('validateOrderRequestIp');
         }
+
+        if (! $this->validate($request)) {
+            return $this->responseError('validateOrderRequestValidate');
+        }
+
+        if (! $this->validateSignature($request)) {
+            return $this->responseError('validateOrderRequestSignature');
+        }
+
+        // if (! $this->validateOrderRequestFromGate($request)) {
+        //     return $this->responseError('validateOrderRequestFromGate');
+        // }
 
         // Search and return order
         $order = $this->callFilterSearchOrder($request);
