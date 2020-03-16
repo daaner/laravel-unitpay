@@ -59,7 +59,7 @@ return [
     /*
      * Использование Cloudflare для проверки IP адреса отправителя запроса
      */
-    'cloudflare' = env('UNITPAY_CLOUDFLARE', false),
+    'cloudflare' => env('UNITPAY_CLOUDFLARE', false),
 
     /*
      * The notification that will be send when payment request received.
