@@ -204,11 +204,11 @@ class UnitPay
             'method' => 'required|in:check,pay,error',
             'params.account' => 'required',
             'params.date' => 'required',
-            'params.payerSum' => 'required',
-            'params.payerCurrency' => 'required',
-            'params.signature' => 'required',
-            'params.orderSum' => 'required',
             'params.orderCurrency' => 'required',
+            'params.orderSum' => 'required',
+            'params.payerCurrency' => 'required',
+            'params.payerSum' => 'required',
+            'params.signature' => 'required',
             'params.unitpayId' => 'required',
         ]);
 
@@ -362,7 +362,7 @@ class UnitPay
     {
         // Validate request params from UnitPay server.
         if (! $this->validateOrderRequestFromGate($request)) {
-            return $this->responseError('validateOrderRequestFromGate');
+            return false;
         }
 
         // Search and return order
