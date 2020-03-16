@@ -360,8 +360,13 @@ class UnitPay
      */
     public function payOrderFromGate(Request $request)
     {
+        $ip = $request->ip();
+        if (config('unitpay.cloudflare')) {
+          $ip = $_SERVER["HTTP_CF_CONNECTING_IP"];
+        }
+
         // Validate request params from UnitPay server.
-        if (! $this->AllowIP($request->ip())) {
+        if (! $this->AllowIP($ip)) {
             return $this->responseError('validateOrderRequestIp');
         }
 
@@ -372,10 +377,6 @@ class UnitPay
         if (! $this->validateSignature($request)) {
             return $this->responseError('validateOrderRequestSignature');
         }
-
-        // if (! $this->validateOrderRequestFromGate($request)) {
-        //     return $this->responseError('validateOrderRequestFromGate');
-        // }
 
         // Search and return order
         $order = $this->callFilterSearchOrder($request);
